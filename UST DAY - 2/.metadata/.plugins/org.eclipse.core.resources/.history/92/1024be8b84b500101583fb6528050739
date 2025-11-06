@@ -1,0 +1,17 @@
+package LearningValue;
+
+public class MemeoryRep {
+	public static void main(String args[]) {
+		boolean age = false;
+		short a = 2;
+		int b = 10;
+		long c = 1023L;
+		float d = 12.34f;
+		double e = 12.345;
+		char f = 'a';
+		System.out.println("Data Type: " + Integer.TYPE);
+		System.out.println("Size : " + Integer.BYTES + " bytes");
+		System.out.println("Minimum Value: " + Integer.MIN_VALUE);
+		System.out.println("Maximum Value: " + Integer.MAX_VALUE);
+	}
+}

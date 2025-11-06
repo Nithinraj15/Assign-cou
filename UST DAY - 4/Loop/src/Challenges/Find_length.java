@@ -1,0 +1,14 @@
+package Challenges;
+
+public class Find_length {
+	public static void main(String args[]) {
+		int a = 1234565678;
+		float b = 12345.6f;
+		String str = "NITHINRAJ";
+		System.out.println((int)Math.log10(a)+1);
+		System.out.println((int)Math.log10(b)+1);
+		String g = String.valueOf(a);
+		System.out.println(g.length());
+		String m = String.valueOf(b);
+	}
+}

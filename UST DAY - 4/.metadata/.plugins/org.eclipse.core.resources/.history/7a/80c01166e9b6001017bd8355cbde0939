@@ -1,0 +1,11 @@
+package Challenges;
+
+public class Find_length {
+	public static void main(String args[]) {
+		int a = 12345;
+		float b = 12345.6f;
+		String str = "NITHINRAJ";
+		System.out.println("String length : " + str.length());
+		System.out.println();
+	}
+}

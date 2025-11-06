@@ -1,0 +1,36 @@
+package LearningValue;
+class Vehicle{
+	static int totalVehiclesCreated = 0;
+	String brand;
+	int year;
+	
+public Vehicle(String brand, int year){
+	this.brand = brand;
+	this.year = year;
+	totalVehiclesCreated++;
+	}
+public void displayVehicleDetails()
+{
+	String message = "----- Vehicle Information -----";
+	System.out.println(message);
+	System.out.println("Brand : " + brand);
+	System.out.println("Year : " + year);
+	}
+public void changeBrand(String newBrand) {
+	this.brand = newBrand;
+}
+}
+public class localInstanceStatic {
+	public static void main(String args[]) {
+		Vehicle v1 = new Vehicle("TATA",2025);
+		Vehicle v2 = new Vehicle("Ford",2024);
+		Vehicle v3 = new Vehicle("Mahindra",2023);
+		v1.displayVehicleDetails();
+		v2.displayVehicleDetails();
+		v3.displayVehicleDetails();	
+		v2.changeBrand("Motors");
+		System.out.println("After changing the brand");
+		v2.displayVehicleDetails();
+		System.out.println("TotalVehicleCreated : " + Vehicle.totalVehiclesCreated);
+	}
+}

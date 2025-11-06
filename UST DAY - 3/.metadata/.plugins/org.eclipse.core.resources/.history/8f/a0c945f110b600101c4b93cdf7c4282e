@@ -1,0 +1,22 @@
+package Operator_All;
+
+public class Arithmetic_Operator {
+	public static void main(String args[]) {
+	int num1 = 25 ,num2 = 7;
+	double price = 10.50;
+	System.out.println("Addition (`+`): " + num1+num2);
+	System.out.println("Subtraction: " + num1 - num2);
+	System.out.println("Multiplication (`*`): " + num1*num2);
+	System.out.println("Integer Division (`/`): " + num1/num2);
+	System.out.println("Floating-point Division (`/`): " + ((double) num1 / num2));
+	System.out.println("Floating-point Division: " + ((double) num1 / num2));
+}
+}
+
+Addition (`+`): `num1 + num2`
+* Subtraction (`-`): `num1 - num2`
+* Multiplication (`*`): `num1 * num2`
+* Integer Division (`/`): `num1 / num2`
+* Floating-point Division (`/`): `(double) num1 / num2`
+* Modulus (`%`): `num1 % num2`
+* Demonstrate adding `num1` to `price` (e.g., `price + num1`).

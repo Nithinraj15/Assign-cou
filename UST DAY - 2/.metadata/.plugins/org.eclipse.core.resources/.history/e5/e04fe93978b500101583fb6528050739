@@ -1,0 +1,13 @@
+package LearningValue;
+class CircleCalculator{
+	 final static double PI = 3.14159;
+	 
+//double calculateArea(double radius) {
+		 
+	 }
+
+}
+
+public class FinalKey {
+
+}

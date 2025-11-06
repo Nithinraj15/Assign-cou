@@ -1,0 +1,10 @@
+package array;
+
+public class ArrayTraversal {
+	public static void main(String args[]) {
+		int[] studentScores = {85, 72, 90, 65, 50, 95, 78, 88, 60, 100};
+		for(int i=0; i<studentScores.length; i++) {
+			System.out.println("Print All Scores: " + studentScores[i]);
+		}
+	}
+}

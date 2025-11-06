@@ -1,0 +1,20 @@
+package LearningValue;
+class Box{
+	public int size;
+}
+public class RefVar {
+	public static void changePrimitive(Box myBox) {
+		myBox.size = 500;
+		System.out.println("The value of MyBOX is : " + myBox.size);
+		}
+	public static void main(String args[]) {
+		Box box1 = new Box();
+		box1.size = 100;
+		Box box2 = box1;
+		box2.size = 200;
+		System.out.println("BOX 1 Size : " + box1.size);
+		System.out.println("BOX 2 Size : " + box2.size);
+		changePrimitive(34);
+		System.out.println("BOX 1 Size : " + box1.size);
+	}
+}

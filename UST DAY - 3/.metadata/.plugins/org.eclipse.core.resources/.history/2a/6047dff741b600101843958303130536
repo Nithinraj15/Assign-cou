@@ -1,0 +1,20 @@
+package CinditionalStatement;
+
+public class For_Loop {
+	public static void main(String[] args) {
+		for(int i=10; i>=1; i--) {
+			System.out.println(i);
+		}
+		System.out.println("Blast Off!");
+		
+		int j=1;
+		int sum =0;
+		while(j<=20) {
+			if(j%2==0) {
+				sum += j;
+				System.out.println(sum);
+			}
+			j++;
+		}
+	}
+}

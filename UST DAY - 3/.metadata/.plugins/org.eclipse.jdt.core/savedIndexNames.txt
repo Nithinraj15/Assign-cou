@@ -1,0 +1,5 @@
+INDEX VERSION 1.134+C:\Users\Administrator\Desktop\UST_Training\UST DAY - 3\.metadata\.plugins\org.eclipse.jdt.core
+3885309026.index
+1865797976.index
+2772189863.index
+3530795062.index

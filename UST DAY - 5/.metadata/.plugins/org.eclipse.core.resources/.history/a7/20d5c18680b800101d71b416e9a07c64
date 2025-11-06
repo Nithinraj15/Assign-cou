@@ -1,0 +1,21 @@
+package array;
+
+public class ArrayTraversal {
+	public static void main(String args[]) {
+		int[] studentScores = {85, 72, 90, 65, 50, 95, 78, 88, 60, 100};
+		int highScore = Integer.MIN_VALUE;
+		int lowScore = Integer.MAX_VALUE;
+		System.out.println("Print All Scores: ");
+		for(int i=0; i<studentScores.length; i++) {
+			System.out.println(studentScores[i]);
+			if(highScore < studentScores[i]) {
+				highScore = studentScores[i];
+			}	
+			if(lowScore > studentScores[i]) {
+				lowScore = studentScores[i];
+			}	
+		}
+		System.out.println("Lowest Value : " + highScore);
+		System.out.println("Highest Value : " + lowScore);
+	}
+}

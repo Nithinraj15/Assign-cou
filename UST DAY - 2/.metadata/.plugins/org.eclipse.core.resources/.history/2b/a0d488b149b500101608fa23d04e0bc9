@@ -1,0 +1,13 @@
+package DataType;
+public class CopyValue {
+	public static void changePrimitive(int value) {
+	int value = 50;
+	System.out.println(value);
+	}
+	public static void main(String args[]) {
+		int num1 = 10;
+		int num2 = num1;
+		num2 = 20;
+		System.out.println(num1);
+	}
+}

@@ -1,0 +1,50 @@
+package application;
+import java.util.Scanner;
+public class AtmApplication {
+	public static void main(String args[]) {
+		Scanner sc = new Scanner(System.in);
+		double balance = 1000.0;
+		outer : while(true) {
+			System.out.println("-------- ATM Apllication -------");
+			System.out.println("1. Check Balance");
+			System.out.println("2. Deposit");
+			System.out.println("3. Withdraw");
+			System.out.println("4. Exit");
+			System.out.println("Enter your choice : ");
+			int choice = sc.nextInt();
+			switch(choice) {
+			case 1:
+				System.out.println("Your current Balance is : " + balance);
+				break;
+			case 2:
+				System.out.println("Enter the amount to deposit : ");
+				double deposit = sc.nextDouble();
+				if(deposit<0) {
+					System.out.println("Invalid amount your are tryping to deposit");
+				}else {
+				balance += deposit;
+				System.out.println("Your amount has been deposited successfully");
+				System.out.println("Your current Balance is : " + balance);
+				}
+				break;
+			case 3:
+				System.out.println("Enter the amount to withdraw : ");
+				double withdraw = sc.nextDouble();
+				if(withdraw>balance) {
+					System.out.println("Insufficient Balance");
+				}else {
+					balance -= withdraw;
+					System.out.println("Amount withdraw has been done successfully");
+					System.out.println("Your current Balance is : " + balance);
+				}
+				break;
+			case 4:
+				System.out.println("Thank you for using our ATM!");
+				break outer;
+			default:
+				System.out.println("Invalid option. Please choose a valid option (1-4).");
+				break;
+			}
+		}
+	}
+}

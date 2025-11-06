@@ -1,0 +1,47 @@
+package Operator_All;
+import java.util.Scanner;
+public class Application_Operator {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("score for Mathematics: "); 
+		double Mathematics = sc.nextDouble();
+		System.out.print("score for Science: "); 
+		double Science = sc.nextDouble();
+		System.out.print("score for English: "); 
+		double English = sc.nextDouble();
+		double totalScore = Mathematics + Science + English;
+		double averageScore = totalScore/3;
+		String result = (averageScore >= 60.0) ? "Passed" : "Failed";
+		char grade;
+		if (averageScore >= 90.0 && averageScore <= 100.0) {
+		    grade = 'A';
+		} else if (averageScore >= 80.0 && averageScore < 90.0) {
+	    grade = 'B';
+		} else if (averageScore >= 70.0 && averageScore < 80.0) {
+		    grade = 'C';
+		} else if (averageScore >= 60.0 && averageScore < 70.0) {
+		    grade = 'D';
+		} else {
+		    grade = 'F';
+	}
+		int studentAttempts = 1;
+		studentAttempts++;
+		
+		double bonusPoints = 5.0;
+		if(grade == 'A') {
+			bonusPoints += 2.5;
+		}
+		
+		System.out.println("--- Student Performance Report ---");
+		System.out.printf("Mathematics Score: %2f\n",Mathematics);
+		System.out.printf("Science Score: %2f\n",Science);
+		System.out.printf("English Score: %2f\n",English);
+		System.out.printf("Total Score: %2f\n",totalScore);
+		System.out.printf("Average Score: %2f\n",averageScore);
+		System.out.println("Status: " + result );
+		System.out.println("Grade: " + grade );
+		System.out.println("Student Attempts: " + studentAttempts);
+		System.out.println("Bonus Points: " + bonusPoints);
+		sc.close();
+	}
+}

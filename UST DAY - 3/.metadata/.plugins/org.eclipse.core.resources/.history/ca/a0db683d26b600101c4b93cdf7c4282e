@@ -1,0 +1,10 @@
+package Operator_All;
+
+public class while_Do {
+	public static void main(String[] args) {
+		int i = 10;
+		do {
+			i++;
+		}while(i==11);
+	}
+}

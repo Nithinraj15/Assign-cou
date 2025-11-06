@@ -1,0 +1,13 @@
+package LearningValue;
+
+public class UnBoxing {
+	public static void main(String args[]) {
+		Integer num = 56;
+		Double dob = 56.43;
+		int a = num;
+		double b = dob;
+		System.out.println("unboxing Integer to int : " + a);
+		System.out.println("unboxing Double to double : " + b);
+	}
+
+}

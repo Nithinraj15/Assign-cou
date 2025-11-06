@@ -1,0 +1,44 @@
+package Operator_All;
+
+public class OperatorPlayground {
+	public static void main(String[] args){
+		int num1 = 20;
+		int num2 = 7;
+		int x = 15;
+		int val1 = 10;
+		int val2 = 20;
+		boolean condition1 = true;
+		boolean condition2 = false;
+		int temperature = 25;
+		System.out.println("Arithmetic Operators:");
+		System.out.println("num1 + num2 = " + (num1 + num2));
+		System.out.println("num1 - num2 = " + (num1 - num2));
+		System.out.println("num1 * num2 = " + (num1 * num2));
+		System.out.println("num1 / num2 = " + (num1 / num2));
+		System.out.println("Assignment Operators:");
+		x+=5;
+		System.out.println("x = " + x);
+		x-=5;
+		System.out.println("x = " + x);
+		x*=5;
+		System.out.println("x = " + x);
+		x/=5;
+		System.out.println("x = " + x);
+		x%=5;
+		System.out.println("x = " + x);
+		System.out.println("Relational Operators:");
+		System.out.println("equality (`==`) " + (val1 == val2));
+		System.out.println("inequality (`!=`) " + (val1 != val2));
+		System.out.println("greater than (`>`) " + (val1 > val2));
+		System.out.println("greater than or equal to (`>=`) " + (val1 >= val2));
+		System.out.println("less than (`<`) " + (val1 < val2));
+		System.out.println("less than or equal to (`<=`) " + (val1 <= val2));
+		System.out.println("Logical Operators:");
+		System.out.println("logical AND (`&&`) " + (condition1 && condition2));
+		System.out.println("logical AND (`||`) " + (condition1 || condition2));
+		System.out.println("logical AND (`&&`) " + (!condition1));
+		System.out.println("Ternary Operators:");
+		System.out.println("assigned string value: " + ((temperature > 25) ? "Hot" : "Cold"));
+		
+	}
+}

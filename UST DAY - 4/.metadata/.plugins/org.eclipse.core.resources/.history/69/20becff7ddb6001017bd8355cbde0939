@@ -1,0 +1,68 @@
+package application;
+public class StudentPerformanceAnalyzer {
+	public char calculateFinalGrade(int score, int attendancePercentage) {
+		char grade;
+		if(score<0 || score>100 || attendancePercentage<0 || attendancePercentage >100) {
+			return 'X';
+		}
+		else if (score >= 90) {
+		    grade = 'A';
+		}
+		else if (score >= 80) {
+		    grade = 'B'; 
+		    }
+		else if (score >= 70) {
+		    grade = 'C';
+		}
+		else if (score >= 60) {
+		    grade = 'D';
+		}
+		else {
+		    grade = 'F';
+		}
+		if(attendancePercentage<75) {
+			switch(grade) {
+			case 'A' : 
+				grade = 'B';
+				break;
+			case 'B' :
+				grade = 'C';
+				break;
+			case 'C' :
+				grade = 'D';
+			case 'D' :
+				grade = 'F';
+			default :
+				grade = 'F';
+			}
+		}
+		if(attendancePercentage == 100) {
+			switch(grade) {
+			case 'D' : 
+				grade = 'C';
+				break;
+			case 'C' :
+				grade = 'B';
+				break;
+			case 'B' :
+				grade = 'A';
+			case 'A' :
+				grade = 'A';
+			default :
+				grade = 'F';
+			}
+		}
+		return grade;
+			}
+	public static void main(String args[]) {
+		StudentPerformanceAnalyzer gc = new  StudentPerformanceAnalyzer();
+		int score1 = 85, attendance1 = 95;
+		System.out.println("score = " + score1 + "attendancePercentage = " + attendance1 + " (Expected: " + gc.calculateFinalGrade(score1, attendance1) + ")" );
+		int score2 = 92, attendance2 = 70;
+		System.out.println("score = " + score2 + "attendancePercentage = " + attendance2 + " (Expected: " + gc.calculateFinalGrade(score2, attendance2) + ")" );
+		int score3 = 55, attendance3 = 100;
+		System.out.println("score = " + score3 + "attendancePercentage = " + attendance3 + " (Expected: " + gc.calculateFinalGrade(score3, attendance3) + ")" );
+		int score4 = 70, attendance4 = 100;
+		System.out.println("score = " + score4 + "attendancePercentage = " + attendance4 + " (Expected: " + gc.calculateFinalGrade(score4, attendance4) + ")" );
+	}
+}

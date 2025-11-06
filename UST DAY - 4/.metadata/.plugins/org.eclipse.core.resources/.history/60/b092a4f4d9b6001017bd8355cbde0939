@@ -1,0 +1,10 @@
+package day_4;
+char calculateFinalGrade(int score, int attendancePercentage) {
+	if(score<0 || score) {
+		
+	}
+		}
+public class StudentPerformanceAnalyzer {
+	public static void main(String args[]) {
+	}
+}
