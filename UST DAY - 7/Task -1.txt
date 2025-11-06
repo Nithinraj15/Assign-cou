@@ -1,0 +1,140 @@
+1 -------------------------------------Task
+
+Actors:
+
+Customer
+Administrator
+
+Use Cases:
+
+Customer -->  Search Books
+Customer --> Add to Cart
+Customer --> Checkout
+Customer --> Place Order
+Customer --> View Order History
+
+Administrator --> Login
+Administrator --> Add Book
+Administrator --> Update Book
+Administrator --> Remove Book
+
+
+Relationships:
+
+
+Search Books  --<<include>>-->  View Book Details
+Checkout      --<<extend>>-->   Apply Discount
+
+2 -------------------------------------Task
+
+Actors:
+
+Customer
+Administrator
+
+Use Cases:
+Customer --> Browse Books
+Customer --> Search by title or author
+Customer --> Add to Cart
+Customer --> View Cart
+Customer --> Update Cart
+Customer --> Remove Item from Cart
+Customer --> Checkout
+Customer --> View Order History  (optional, separate action after checkout)
+
+Administrator --> Add Book
+Administrator --> Update Book
+Administrator --> Remove Book
+
+Relationships:
+
+Browse Books  --<<include>>-->  View Book Details
+Search by Title or Author --<<include>>-->  View Book Details
+
+
+
+
+3 -------------------------------------Task
+
+USECASE Diagram
+
+Actors:
+
+Customer
+Administrator
+
+Use Cases:
+
+Customer -->  Search Books
+Customer --> Add to Cart
+Customer --> Checkout
+Customer --> Place Order
+Customer --> View Order History
+
+Administrator --> Login
+Administrator --> Add Book
+Administrator --> Update Book
+Administrator --> Remove Book
+
+
+Relationships:
+
+
+Search Books  --<<include>>-->  View Book Details
+Checkout      --<<extend>>-->   Apply Discount
+
+CLASS Diagram
+Customer:
+
+Attributes: customerId, name, email, password
+
+Methods: login(), viewOrderHistory()
+
+Book:
+
+Attributes: bookId, title, author, price, ISBN, stockQuantity
+
+Methods: getDetails(), updateStock()
+
+ShoppingCart:
+
+Attributes: cartId, items (list of CartItems)
+
+Methods: addBook(), removeBook(), updateQuantity(), calculateTotal()
+
+CartItem:
+
+Attributes: book: Book, quantity
+
+Methods: calculateItemTotal()
+
+Order:
+
+Attributes: orderId, orderDate, totalAmount, status, 
+customer: Customer, orderItems: List<OrderItem>
+
+Methods: placeOrder(), cancelOrder(), viewOrder()
+
+OrderItem:
+
+Attributes: book: Book, quantity, price
+
+Methods: calculateSubtotal()
+
+Administrator:
+
+Attributes: adminId, name, email, password
+
+Methods: login(), addBook(), updateBook(), removeBook()
+
+Relationships:
+
+Customer 1 → * Order: 
+
+Order 1 → * OrderItem: 
+
+OrderItem * → 1 Book: 
+
+ShoppingCart 1 → * CartItem: 
+
+CartItem * → 1 Book: 

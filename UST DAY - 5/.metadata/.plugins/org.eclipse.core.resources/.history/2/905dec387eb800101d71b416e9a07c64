@@ -1,7 +1,0 @@
-package array;
-
-public class ArrayTraversal {
-	public static void main(String args[]) {
-		
-	}
-}

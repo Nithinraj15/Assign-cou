@@ -1,0 +1,154 @@
+package method;
+
+/**
+ * The Product class represents a product in the inventory system.
+ * It stores information about the product, such as its name, price, and product ID.
+ * Additionally, it provides methods for setting the price, calculating discounts,
+ * and retrieving the product details.
+ */
+class Product {
+
+    /**
+     * The name of the product.
+     * This is used to identify the product in the inventory.
+     */
+    private String name;
+
+    /**
+     * The price of the product.
+     * It represents the cost of the product in the store.
+     */
+    private double price;
+
+    /**
+     * The unique identifier for the product.
+     * This ID is used to uniquely identify the product in the inventory system.
+     */
+    private String productId;
+
+    /**
+     * Constructs a new Product object with the specified name, price, and product ID.
+     * This constructor is used to initialize the product with its basic attributes.
+     * 
+     * @param name The name of the product (e.g., "Box", "Laptop").
+     * @param price The price of the product (a non-negative double value).
+     * @param productId The unique identifier for the product (e.g., "H23", "B45").
+     */
+    public Product(String name, double price, String productId) {
+        this.name = name;
+        this.price = price;
+        this.productId = productId;
+    }
+
+    /**
+     * Gets the name of the product.
+     * 
+     * @return The name of the product.
+     */
+    public String getName() {
+        return name;
+    }
+
+    /**
+     * Gets the price of the product.
+     * 
+     * @return The price of the product.
+     */
+    public double getPrice() {
+        return price;
+    }
+
+    /**
+     * Sets a new price for the product. The new price must be non-negative.
+     * If a negative price is provided, an IllegalArgumentException is thrown.
+     *
+     * @param newPrice The new price of the product.
+     *                 This value is expected to be zero or positive.
+     *
+     * @throws IllegalArgumentException If the provided `newPrice` is negative.
+     */
+    public void setPrice(double newPrice) {
+        if (newPrice < 0) {
+            throw new IllegalArgumentException("The price cannot be negative");
+        }
+        this.price = newPrice;
+    }
+
+    /**
+     * Gets the product ID.
+     * 
+     * @return The product's unique identifier.
+     */
+    public String getProductId() {
+        return productId;
+    }
+
+    /**
+     * Calculates the discounted price of the product based on the given discount percentage.
+     * The percentage must be between 0 and 100. If an invalid percentage is provided, 
+     * an IllegalArgumentException is thrown.
+     *
+     * @param percentage The discount percentage to apply to the price (between 0 and 100).
+     * 
+     * @return The discounted price after applying the percentage discount.
+     * 
+     * @throws IllegalArgumentException If the `percentage` is less than 0 or greater than 100.
+     */
+    public double calculateDiscount(double percentage) {
+        if (percentage < 0 || percentage > 100) {
+            throw new IllegalArgumentException("The discount percentage must be between 0 and 100");
+        }
+        return price - (price * percentage / 100);
+    }
+}
+
+/**
+ * Main class to demonstrate the usage of the Product class.
+ * This class creates a Product object, calculates its discount, and updates the price.
+ */
+public class Task1 {
+    public static void main(String[] args) {
+        // Create a new Product object with name, price, and productId
+        Product pc = new Product("Box", 12.34, "H23");
+
+        // Display product details
+        System.out.println("Name: " + pc.getName());
+        System.out.println("Price: " + pc.getPrice());
+        System.out.println("Product Id: " + pc.getProductId());
+
+        // Calculate and display the discounted price
+        System.out.println("Discounted Price (65% off): " + pc.calculateDiscount(65));
+
+        // Update the product price
+        pc.setPrice(123.43);
+        System.out.println("Updated Price: " + pc.getPrice());
+    }
+}
+
+2------------------------------------------------------------------------------------------------
+
+Step 1: Compile the .java File
+
+javac Product.java
+
+Step 2: Generate JavaDoc Using the javadoc Tool
+
+javadoc Product.java
+
+<h3 id="setPrice">
+<span class="methodname">setPrice</span>
+<span class="param">double newPrice</span>
+</h3>
+<p>
+here it sets a new price for the product. The new price must be non-negative.
+If a negative price is IllegalArgumentException is thrown.
+</p>
+<h4>Parameters:</h4>
+<ul>
+  <li><b>newPrice</b> - The new price of the product.
+   value is expected to be zero or positive.</li>
+</ul>
+<h4>Throws:</h4>
+<ul>
+  <li><b>IllegalArgumentException</b> - If the provided <code>newPrice</code> is negative.</li>
+</ul>

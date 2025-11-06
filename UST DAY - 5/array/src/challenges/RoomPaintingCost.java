@@ -13,6 +13,12 @@ public class RoomPaintingCost {
 		int lenDoo = sc.nextInt();
 		int widDoo = sc.nextInt();
 		int costofpainWal = sc.nextInt();
+		int wallArea = 2 * length * height + 2 * width * height;
+	    int doorArea = noOfDoor * lenDoo * widwin;
+	    int windowArea = noOfWindows * lenwin * widwin;
+	    int paintableArea = wallArea - doorArea - windowArea;
+	    int totalCost = paintableArea * costofpainWal;
+	    System.out.println(totalCost);
 	}
 }
 
